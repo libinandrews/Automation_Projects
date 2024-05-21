@@ -88,9 +88,9 @@ with open(markdown_file_path, 'wb') as md_file:
             pattern = r'[^a-zA-Z0-9\s]'
             name = re.sub(pattern, '', file_name)
             md_file.write(
-                f"- [ ] ## {int(length/60)} Min_{name} \n \n ```{file_path}```     \n".encode('utf-8'))
+                f"- [ ] {int(length/60)} Min_{name} \n \n ```{file_path}```     \n".encode('utf-8'))
             md_file.write(
-                f"![[{file_name}.mp4]]".encode('utf-8'))
+                f"![[{file_name}.mp4]] \n \n *** \n \n ".encode('utf-8'))
             print(f'{n}/{total} completed file - {file_name}')
         except Exception as e:
             print(e)
