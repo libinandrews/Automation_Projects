@@ -86,7 +86,6 @@ class YouTubePlaylistExporter:
 
                     if not video.watch_url:
                         pbar.set_postfix_str(f"❌ Skipping: {title}")
-                        time.sleep(0.5)  # Simulating delay for demo
                         pbar.update(1)
                         continue
 
